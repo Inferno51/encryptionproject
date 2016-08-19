@@ -18,10 +18,10 @@ public class Encrypt {
 		System.out.println("Please enter a word to encrypt:\n");
 		userInput = sc.nextLine();
 		
-		System.out.println("Please enter a key for your encryption: Enter a number between 1 and 5.");
+		System.out.println("Please enter a number key for your encryption:");
 		userKey = sc2.nextInt();
 		
-		System.out.println(encryptionizer(userInput, userKey));
+		System.out.println(encryptor(userInput, userKey));
 		
 		System.out.println("Do you want to decrypt a word? Enter yes or no:");
 		userInput = sc.nextLine();
@@ -33,7 +33,7 @@ public class Encrypt {
 			System.out.println("Enter the key you used to encrypt your word: Enter a number between 1 and 5.");
 			userKey = sc2.nextInt();
 			
-			System.out.println(Decrypt.decryptionizer(userInput, userKey));
+			System.out.println(Decrypt.decryptor(userInput, userKey));
 		} else if (userInput.equalsIgnoreCase("no")) {
 			System.exit(0);
 		}
@@ -42,7 +42,7 @@ public class Encrypt {
 		sc2.close();
 	}
 	
-	protected static String encryptionizer(String encryptThis, int key) {
+	protected static String encryptor(String encryptThis, int key) {
 		int stringLength = encryptThis.length();
 		String encrypted = "";
 		int newCharValue;

@@ -1,7 +1,7 @@
 package com.encryptionproject;
 
 public class Decrypt {
-	protected static String decryptionizer(String encrypted, int key){
+	protected static String decryptor(String encrypted, int key){
 		int stringLenght = encrypted.length();
 		String decrypted = "";
 		int newCharValue;
